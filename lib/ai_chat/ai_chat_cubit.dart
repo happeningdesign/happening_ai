@@ -78,7 +78,7 @@ class AiChatCubit extends Cubit<AiChatState> {
       }
 
       final data = jsonDecode(resp.body) as Map<String, dynamic>;
-      final markdown = (data['code'] ?? '').toString().trim();
+      final markdown = (data['content'] ?? '').toString().trim();
       final reply = markdown.isEmpty ? '_No response returned._' : markdown;
 
       emit(

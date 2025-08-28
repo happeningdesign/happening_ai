@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:highlight/highlight.dart' as hi;
+import 'package:highlight/highlight.dart' as hi;/*
 import 'package:dart_eval/dart_eval.dart';
-import 'package:flutter_eval/flutter_eval.dart';
+import 'package:flutter_eval/flutter_eval.dart';*/
 
 import 'ai_chat_cubit.dart';
 import 'ai_chat_models.dart';
@@ -402,10 +402,10 @@ class _ModernCodeCardState extends State<_ModernCodeCard> {
   }
 
   void _showPreview() {
-    showDialog(
+   /* showDialog(
       context: context,
       builder: (context) => _FlutterCodePreviewDialog(code: widget.code),
-    );
+    );*/
   }
 
   @override
@@ -775,6 +775,7 @@ class _TypingIndicatorState extends State<_TypingIndicator>
   }
 }
 
+/*
 class _FlutterCodePreviewDialog extends StatefulWidget {
   final String code;
 
@@ -1363,3 +1364,4 @@ Widget createWidget() {
     );
   }
 }
+*/

@@ -38,8 +38,8 @@ dependencies:
   flutter_markdown: ^0.6.18
   highlight: ^0.7.0
   flutter_bloc: ^8.1.6
-  dart_eval: ^0.8.1
-  flutter_eval: ^0.8.0
+#  dart_eval: ^0.8.1
+#  flutter_eval: ^0.8.0
 
 dependency_overrides:
   analyzer: ^6.7.0
