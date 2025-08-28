@@ -7,9 +7,8 @@ import 'ai_chat_models.dart';
 
 /// ====================== CONFIG ======================
 /// Point this to your deployed backend:
-const String kBackendBase = 'http://localhost:8080';
-const String kEndpointPath =
-    '/api/ai/generate-code'; // POST { userPrompt: string }
+const String kBackendBase = 'https://happeningaibackend.vercel.app';
+const String kEndpointPath = '/api/ai'; // POST { userPrompt: string }
 
 class AiChatState {
   final List<ChatMessage> messages;
@@ -62,7 +61,7 @@ class AiChatCubit extends Cubit<AiChatState> {
       final resp = await http.post(
         uri,
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'userPrompt': trimmed}),
+        body: jsonEncode({'prompt': trimmed}),
       );
 
       if (resp.statusCode != 200) {
